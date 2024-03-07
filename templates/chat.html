@@ -1,0 +1,18 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat with {{ match.username }}</title>
+</head>
+<body>
+<h1>Chat with {{ match.username }}</h1>
+<form action="/chat/{{ user.username }}/{{ match.username }}/" method="post">
+<textarea name="message" placeholder="Type your message here..."></textarea>
+<input type="submit" value="Send">
+</form>
+</body>
+</html>
+

@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ user.username }}'s Profile</title>
+</head>
+<body>
+<h1>{{ user.username }}'s Profile</h1>
+<ul>
+<li>Username: {{ user.username }}</li>
+<li>MBTI type: {{ user.mbti_type }}</li>
+</ul>
+<h2>Potential Matches</h2>
+<ul>
+{% for match in matches %}
+<li><a href="/chat/{{ user.username }}/{{ match.match.username }}/">{{ match.match.username }}</a> (compatibility: {{ match.compatibility }})</li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
